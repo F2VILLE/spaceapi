@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, {AxiosRequestConfig} from "axios";
 import SpaceAPISchema from "../types/SpaceAPISchema";
 
 class Space {
@@ -7,10 +7,10 @@ class Space {
     this.data = null;
   }
 
-  async fetch(): Promise<SpaceAPISchema> {
+  async fetch(options: AxiosRequestConfig): Promise<SpaceAPISchema> {
     return new Promise((resolve, reject) => {
       axios
-        .get(this.url)
+        .get(this.url, options || {})
         .then((response) => {
           this.data = response.data;
           resolve(response.data);
