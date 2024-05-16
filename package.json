@@ -1,6 +1,6 @@
 {
   "name": "@f2ville/spaceapi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This module is made to interact easily with SpaceAPI (see https://spaceapi.io)",
   "main": "lib/index.js",
   "files": [
