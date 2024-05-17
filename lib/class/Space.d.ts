@@ -1,9 +1,10 @@
+import { AxiosRequestConfig } from "axios";
 import SpaceAPISchema from "../types/SpaceAPISchema";
 declare class Space {
     url: string;
     data: SpaceAPISchema;
     constructor(url: string);
-    fetch(): Promise<SpaceAPISchema>;
+    fetch(options: AxiosRequestConfig): Promise<SpaceAPISchema>;
     static findByName(name: string): Promise<Array<{
         name: string;
         url: string;
